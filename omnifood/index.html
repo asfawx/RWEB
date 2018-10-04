@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, inital-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="./vendors/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./vendors/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="./vendors/css/animate.css" />
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="./resources/css/queries.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
@@ -13,36 +14,49 @@
     <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
 
     <title>Ominifood</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./resources/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./resources/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./resources/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./resources/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./resources/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./resources/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
     <header>
         <nav>
             <div class="row">
-                <img class="logo" src="./resources/img/logo-white.png" alt="Ominifood log">
-                <ul class="main-nav">
-                    <li><a href="#">Food delivery</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Our cities</a></li>
-                    <li><a href="#">Sign up</a></li>
+                <img class="logo" src="./resources/img/logo-white.png" alt="Ominifood logo">
+                <img class="logo-black" src="./resources/img/logo.png" alt="Ominifood logo">
+                <ul class="main-nav js--main-nav">
+                    <li><a href="#features">Food delivery</a></li>
+                    <li><a href="#works">How it works</a></li>
+                    <li><a href="#cities">Our cities</a></li>
+                    <li><a href="#plans">Sign up</a></li>
                 </ul>
+                <a class="mobile-nav-icon js--nav-icon">
+                    <ion-icon class="mobile-icon" name="menu"></ion-icon>
+                </a>
             </div>
         </nav>
         <div class="hero-text-box">
             <h1>Goodbye junk food. <br /> Hello super healthy meals.</h1>
-            <a class="btn btn-full" href="#">I’m hungry</a>
-            <a class="btn btn-ghost" href="#">Show me more</a>
+            <a class="btn btn-full js--scroll-to-plan" href="#">I'm hungry</a>
+            <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
         </div>
     </header>
 
-    <section class="section-features">
+    <section class="section-features js--section-features" id="features">
         <div class="row">
             <h2>Get food fast &mdash; not fast food.</h2>
             <p class="long-copy">
-
-                Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for
-                cooking. So let us take care of that, we’re really good at it, we promise!</p>
-            <div class="row">
+                Hello, we're Omnifood, your new premium food delivery service. We know you're always busy. No time for
+                cooking. So let us take care of that, we're really good at it, we promise!</p>
+            <div class="row js--wp-1">
                 <div class="col span-1-of-4 box">
                     <ion-icon class="icon-big" name="infinite"></ion-icon>
                     <h3>Up to 365 days/year</h3>
@@ -110,13 +124,13 @@
         </ul>
     </section>
 
-    <section class="section-steps">
+    <section class="section-steps" id="works">
         <div class="row">
             <h2>How it works &mdash; Simple as 1, 2, 3</h2>
         </div>
         <div class="row">
             <div class="col span-1-of-2 steps-box">
-                <img class="app-screen" src="./resources/img/app-iPhone.png" alt="Ominifood app on iphone">
+                <img class="app-screen js--wp-2" src="./resources/img/app-iPhone.png" alt="Ominifood app on iphone">
             </div>
             <div class="col span-1-of-2 steps-box">
                 <div class="works-step">
@@ -138,11 +152,11 @@
         </div>
     </section>
 
-    <section class="section-cities">
+    <section class="section-cities" id="cities">
         <div class="row">
             <h2>We're currently in these cities</h2>
         </div>
-        <div class="row">
+        <div class="row js--wp-3">
             <div class="col span-1-of-4 box">
                 <img src="./resources/img/lisbon-3.jpg" alt="Lisbon">
                 <h3>Lisbon</h3>
@@ -253,13 +267,13 @@
         </div>
     </section>
 
-    <section class="section-plans">
+    <section class="section-plans js--section-plans" id="plans">
         <div class="row">
             <h2>Start eating healthy today</h2>
         </div>
         <div class="row">
             <div class="col span-1-of-3">
-                <div class="plan-box">
+                <div class="plan-box js--wp-4">
                     <div>
                         <h3>Premium</h3>
                         <p class="plan-price">$399 <span>/ month</span></p>
@@ -267,10 +281,18 @@
                     </div>
                     <div>
                         <ul>
-                            <li><ion-icon class="icon-small" name="checkmark"></ion-icon> 1 meal every day</li>
-                            <li><ion-icon class="icon-small" name="checkmark"></ion-icon> Order 24/7</li>
-                            <li><ion-icon class="icon-small" name="checkmark"></ion-icon> Access to newest creations</li>
-                            <li><ion-icon class="icon-small" name="checkmark"></ion-icon> Free delivery</li>                            
+                            <li>
+                                <ion-icon class="icon-small" name="checkmark"></ion-icon> 1 meal every day
+                            </li>
+                            <li>
+                                <ion-icon class="icon-small" name="checkmark"></ion-icon> Order 24/7
+                            </li>
+                            <li>
+                                <ion-icon class="icon-small" name="checkmark"></ion-icon> Access to newest creations
+                            </li>
+                            <li>
+                                <ion-icon class="icon-small" name="checkmark"></ion-icon> Free delivery
+                            </li>
                         </ul>
                     </div>
                     <div>
@@ -287,10 +309,18 @@
                     </div>
                     <div>
                         <ul>
-                            <li><ion-icon class="icon-small" name="checkmark"></ion-icon> 1 meal 10 days/month</li>
-                            <li><ion-icon class="icon-small" name="checkmark"></ion-icon> Order 24/7</li>
-                            <li><ion-icon class="icon-small" name="checkmark"></ion-icon> Access to newest creations</li>
-                            <li><ion-icon class="icon-small" name="checkmark"></ion-icon> Free delivery</li>                            
+                            <li>
+                                <ion-icon class="icon-small" name="checkmark"></ion-icon> 1 meal 10 days/month
+                            </li>
+                            <li>
+                                <ion-icon class="icon-small" name="checkmark"></ion-icon> Order 24/7
+                            </li>
+                            <li>
+                                <ion-icon class="icon-small" name="checkmark"></ion-icon> Access to newest creations
+                            </li>
+                            <li>
+                                <ion-icon class="icon-small" name="checkmark"></ion-icon> Free delivery
+                            </li>
                         </ul>
                     </div>
                     <div>
@@ -307,10 +337,18 @@
                     </div>
                     <div>
                         <ul>
-                            <li><ion-icon class="icon-small" name="checkmark"></ion-icon> 1 meal</li>
-                            <li><ion-icon class="icon-small" name="checkmark"></ion-icon> Order from 8 am to 12 pm</li>
-                            <li><ion-icon class="icon-small" name="close"></ion-icon></li>
-                            <li><ion-icon class="icon-small" name="checkmark"></ion-icon> Free delivery</li>                            
+                            <li>
+                                <ion-icon class="icon-small" name="checkmark"></ion-icon> 1 meal
+                            </li>
+                            <li>
+                                <ion-icon class="icon-small" name="checkmark"></ion-icon> Order from 8 am to 12 pm
+                            </li>
+                            <li>
+                                <ion-icon class="icon-small" name="close"></ion-icon>
+                            </li>
+                            <li>
+                                <ion-icon class="icon-small" name="checkmark"></ion-icon> Free delivery
+                            </li>
                         </ul>
                     </div>
                     <div>
@@ -397,10 +435,18 @@
             </div>
             <div class="col span-1-of-2">
                 <ul class="social-links">
-                    <li><a href="#"><ion-icon class="logo-facebook" name="logo-facebook"></ion-icon></a></li>
-                    <li><a href="#"><ion-icon class="logo-twitter" name="logo-twitter"></ion-icon></a></li>
-                    <li><a href="#"><ion-icon class="logo-googleplus" name="logo-googleplus"></ion-icon></a></li>
-                    <li><a href="#"><ion-icon class="logo-instagram" name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="#">
+                            <ion-icon class="logo-facebook" name="logo-facebook"></ion-icon>
+                        </a></li>
+                    <li><a href="#">
+                            <ion-icon class="logo-twitter" name="logo-twitter"></ion-icon>
+                        </a></li>
+                    <li><a href="#">
+                            <ion-icon class="logo-googleplus" name="logo-googleplus"></ion-icon>
+                        </a></li>
+                    <li><a href="#">
+                            <ion-icon class="logo-instagram" name="logo-instagram"></ion-icon>
+                        </a></li>
                 </ul>
             </div>
         </div>
@@ -409,6 +455,9 @@
         </div>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./vendors/js/jquery.waypoints.min.js"></script>
+    <script src="resources/js/scripts.js"></script>
 </body>
 
 </html>
