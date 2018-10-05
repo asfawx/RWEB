@@ -64,34 +64,51 @@ $(document).ready(function () {
         });
 
     /** Animations on scroll */
-    $('.js--wp-1').waypoint(function(direction) {
+    $('.js--wp-1').waypoint(function (direction) {
         $('.js--wp-1').addClass('animated fadeIn');
     }, {
         offset: '50%'
     });
 
-    $('.js--wp-2').waypoint(function(direction) {
+    $('.js--wp-2').waypoint(function (direction) {
         $('.js--wp-2').addClass('animated fadeInUp');
     }, {
         offset: '50%'
     });
 
-    $('.js--wp-3').waypoint(function(direction) {
+    $('.js--wp-3').waypoint(function (direction) {
         $('.js--wp-3').addClass('animated fadeIn');
     }, {
         offset: '50%'
     });
 
-    $('.js--wp-4').waypoint(function(direction) {
+    $('.js--wp-4').waypoint(function (direction) {
         $('.js--wp-4').addClass('animated pulse');
     }, {
         offset: '50%'
     });
 
     /** mobile navigation  */
-    $('.js--nav-icon').click(function() {
+    $('.js--nav-icon').click(function () {
         var nav = $('.js--main-nav');
 
         nav.slideToggle(200);
+    });
+
+    /** maps */
+    var map = new GMaps({
+        div: '.map',
+        lat: 38.7436266,
+        lng: -9.05,
+        zoom: 12
+    });
+
+    map.addMarker({
+        lat: 38.7436266,
+        lng: -9.1602037,
+        title: 'Lisbon',
+        infoWindow: {
+            content: '<p>Our Lisbon Headquaters</p>'
+          }
     });
 });
